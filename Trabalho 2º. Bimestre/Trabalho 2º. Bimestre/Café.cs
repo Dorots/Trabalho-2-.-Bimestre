@@ -9,14 +9,29 @@ namespace Trabalho_2º.Bimestre
    abstract class Café
     {
 
-        private char tipo;
+        private string tipo;
         private string nome;
-        private int defeitos;
+        private double defeitos;
+        public string Tipo
+        {
+            get { return tipo; }
+            set { tipo = value; }
+        }
         public string Nome
         {
             get { return nome; }
             set { nome = value; }
         }
+        public double Defeitos
+        {
+            get { return defeitos ; }
+            set { defeitos = value; }
+        }
+        public Café(string t,string n, double d) { tipo = t;nome = n;defeitos = d; }
 
+        public string Mostracafé()
+        {
+            return nome + "/" + tipo + "/" + "/" + defeitos; 
+        }
     }
 }
