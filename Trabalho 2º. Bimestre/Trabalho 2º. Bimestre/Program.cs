@@ -24,10 +24,22 @@ namespace Trabalho_2º.Bimestre
                 switch (op)
                 {
                     case 1:
-                      
+                        Comum coffee = null;
+                        Console.Write("Informe o nome do Café: ");
+                        coffee.Nomec = Console.ReadLine();
+                        Console.Write("Informe o defeito do café: ");
+                        coffee.Defeitos = Console.ReadLine();
+                        coffee.Gravar(coffee);
+
                         break;
                     case 2:
-                        
+                        Especial coffe = null;
+                        Console.Write("Informe o nome do Café: ");
+                        coffe.Nomec = Console.ReadLine();
+                        Console.Write("Informe o defeito do café: ");
+                        coffe.Defeitos = Console.ReadLine();
+                        coffe.Gravar(coffe);
+
                         break;
                     case 3:
                         

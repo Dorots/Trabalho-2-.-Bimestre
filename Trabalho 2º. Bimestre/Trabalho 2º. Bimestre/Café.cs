@@ -6,32 +6,27 @@ using System.Threading.Tasks;
 
 namespace Trabalho_2º.Bimestre
 {
-   abstract class Café
+    abstract class Cafe 
     {
+        private string nomec;
+        private string defeitos;
 
-        private string tipo;
-        private string nome;
-        private double defeitos;
-        public string Tipo
-        {
-            get { return tipo; }
-            set { tipo = value; }
+        public Cafe()
+        { }
+
+        public string Nomec
+        { get { return nomec; }
+            set { nomec = value; }      
         }
-        public string Nome
-        {
-            get { return nome; }
-            set { nome = value; }
-        }
-        public double Defeitos
+
+        public string Defeitos
         {
             get { return defeitos ; }
             set { defeitos = value; }
         }
-        public Café(string t,string n, double d) { tipo = t;nome = n;defeitos = d; }
+        abstract public void Gravar(Cafe coffee);
 
-        public string Mostracafé()
-        {
-            return nome + "/" + tipo + "/" + "/" + defeitos; 
-        }
+        abstract public List<Cafe> Mostra();
+        
     }
 }
