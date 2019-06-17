@@ -34,6 +34,8 @@ namespace Trabalho_2º.Bimestre
                             cafe_simples.Nomec = Console.ReadLine();
                             Console.Write("Informe o defeito do café: ");
                             cafe_simples.Defeitos = long.Parse(Console.ReadLine());
+                            Console.Write("Porcentagem de impurezas: ");
+                            cafe_simples.QntImp = double.Parse(Console.ReadLine());
                             LC.Add(cafe_simples);
                             break;
                         case 2:
@@ -42,6 +44,8 @@ namespace Trabalho_2º.Bimestre
                             cafe_especia.Nomec = Console.ReadLine();
                             Console.Write("Informe quantidade de defeitos do café: ");
                             cafe_especia.Defeitos = long.Parse(Console.ReadLine());
+                            Console.Write("Informe a Classificação: ");
+                            cafe_especia.Classificacao = Console.ReadLine();
                             LC.Add(cafe_especia);
                             break;
                         case 3:

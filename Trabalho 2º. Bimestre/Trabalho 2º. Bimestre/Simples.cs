@@ -8,14 +8,14 @@ namespace Trabalho_2º.Bimestre
 {
     class Simples : Cafe
     {
-        private int qntImp;
+        private double qntImp;
         public Simples() { categoria = "Simples"; }
 
-        public int QntImp
+        public double QntImp
         {
             set { qntImp = value; }
         }
 
-        public override string Mostra() { return "Nome do Café: "+Nomec + " Defeitos: " + Defeitos+" Quantidade de impurezas: "+qntImp; }
+        public override string Mostra() { return "Nome do Café: "+Nomec + " - Defeitos: " + Defeitos+" - Quantidade de impurezas: "+qntImp.ToString()+"%"; }
     }
 }
