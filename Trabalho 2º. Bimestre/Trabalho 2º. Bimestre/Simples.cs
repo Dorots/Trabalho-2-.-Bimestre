@@ -9,7 +9,8 @@ namespace Trabalho_2º.Bimestre
     class Simples : Cafe
     {
         private double qntImp;
-        public Simples() { categoria = "Simples"; }
+
+        Simples() { categoria = "Simples"; }
 
         public double QntImp
         {
