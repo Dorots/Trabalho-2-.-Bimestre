@@ -43,10 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Café.cs" />
-    <Compile Include="Minhaex.cs" />
+    <Compile Include="Cafe.cs" />
+    <Compile Include="Especia.cs" />
+    <Compile Include="Minha Excessão.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Simples.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

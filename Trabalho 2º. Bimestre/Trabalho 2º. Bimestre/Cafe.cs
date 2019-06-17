@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Trabalho_2º.Bimestre
 {
-    abstract class Cafe 
+    abstract class Cafe
     {
         private string nomec;
         private string defeitos;
@@ -15,18 +15,18 @@ namespace Trabalho_2º.Bimestre
         { }
 
         public string Nomec
-        { get { return nomec; }
-            set { nomec = value; }      
+        {
+            get { return nomec; }
+            set { nomec = value; }
         }
 
         public string Defeitos
         {
-            get { return defeitos ; }
+            get { return defeitos; }
             set { defeitos = value; }
         }
         abstract public void Gravar(Cafe coffee);
 
         abstract public List<Cafe> Mostra();
-        
     }
 }
