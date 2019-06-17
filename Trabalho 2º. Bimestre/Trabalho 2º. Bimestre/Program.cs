@@ -32,7 +32,7 @@ namespace Trabalho_2º.Bimestre
                             Console.Write("Informe o nome do Café: ");
                             coffee.Nomec = Console.ReadLine();
                             Console.Write("Informe o defeito do café: ");
-                            coffee.Defeitos = Console.ReadLine();
+                            coffee.Defeitos = long.Parse (Console.ReadLine());
                             coffee.Gravar(coffee);
 
                             break;
@@ -40,8 +40,8 @@ namespace Trabalho_2º.Bimestre
                             coffe = new Especia();
                             Console.Write("Informe o nome do Café: ");
                             coffe.Nomec = Console.ReadLine();
-                            Console.Write("Informe o defeito do café: ");
-                            coffe.Defeitos = Console.ReadLine();
+                            Console.Write("Informe quantidade de defeitos do café: ");
+                            coffe.Defeitos = long.Parse (Console.ReadLine());
                             coffe.Gravar(coffe);
                             break;
                         case 3:

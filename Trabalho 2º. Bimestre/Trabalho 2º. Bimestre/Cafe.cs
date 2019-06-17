@@ -9,7 +9,7 @@ namespace Trabalho_2º.Bimestre
     abstract class Cafe
     {
         private string nomec;
-        private string defeitos;
+        private long defeitos;
 
         public Cafe()
         { }
@@ -20,7 +20,7 @@ namespace Trabalho_2º.Bimestre
             set { nomec = value; }
         }
 
-        public string Defeitos
+        public long Defeitos
         {
             get { return defeitos; }
             set { defeitos = value; }
