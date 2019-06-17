@@ -18,6 +18,7 @@ namespace Trabalho_2º.Bimestre
                 Console.WriteLine("2.Cadastrar Café especial");
                 Console.WriteLine("3.Mostar cafés por tipo: ");
                 Console.WriteLine("4.Mostrar todos os cafés : ");
+                Console.WriteLine("5.Encerrar");
                 Console.Write("Sua opção:");
                 op = int.Parse(Console.ReadLine());
                 switch (op)
