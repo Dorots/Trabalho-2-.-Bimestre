@@ -8,20 +8,13 @@ namespace Trabalho_2º.Bimestre
 {
     class Especia : Cafe
     {
-        private List<Cafe> LS;
+        private string classificacao;
 
-        public Especia()
+        public string Classificacao
         {
-            LS = new List<Cafe>();
+            set { classificacao = value; }
         }
-
-        override public void Gravar(Cafe coffee)
-        {
-            LS.Add(coffee);
-        }
-        public override List<Cafe> Mostra()
-        {
-            return LS;
-        }
+        public Especia() { categoria = "Especial"; }
+        public override string Mostra() { return "Nome do café: "+Nomec + " Defeitos:"  + Defeitos+" Classificação: "+classificacao; }
     }
 }

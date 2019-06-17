@@ -10,9 +10,7 @@ namespace Trabalho_2º.Bimestre
     {
         private string nomec;
         private long defeitos;
-
-        public Cafe()
-        { }
+        protected string categoria;
 
         public string Nomec
         {
@@ -25,8 +23,9 @@ namespace Trabalho_2º.Bimestre
             get { return defeitos; }
             set { defeitos = value; }
         }
-        abstract public void Gravar(Cafe coffee);
 
-        abstract public List<Cafe> Mostra();
+        public string Categoria { get => categoria; }
+
+        abstract public string Mostra();
     }
 }

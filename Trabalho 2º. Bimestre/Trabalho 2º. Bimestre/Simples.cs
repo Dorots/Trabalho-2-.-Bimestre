@@ -8,20 +8,14 @@ namespace Trabalho_2º.Bimestre
 {
     class Simples : Cafe
     {
-        protected List<Cafe> LC;
+        private int qntImp;
+        public Simples() { categoria = "Simples"; }
 
-
-        public Simples()
-        { LC = new List<Cafe>(); }
-
-        override public void Gravar(Cafe coffee)
+        public int QntImp
         {
-            LC.Add(coffee);
+            set { qntImp = value; }
         }
 
-        public override List<Cafe> Mostra()
-        {
-            return LC;
-        }
+        public override string Mostra() { return "Nome do Café: "+Nomec + " Defeitos: " + Defeitos+" Quantidade de impurezas: "+qntImp; }
     }
 }

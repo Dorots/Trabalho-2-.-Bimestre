@@ -12,8 +12,10 @@ namespace Trabalho_2º.Bimestre
         {
             try
             {
-                int op,op1;
-                Simples coffee= new Simples();
+                int op = 0, op1 = 0;
+                List<Cafe> LC = new List<Cafe>();
+                Simples cafe_simples = null;
+                Especia cafe_especia = null;
                 do
                 {
                     Console.Clear();
@@ -27,19 +29,20 @@ namespace Trabalho_2º.Bimestre
                     switch (op)
                     {
                         case 1:
+                            cafe_simples = new Simples();
                             Console.Write("Informe o nome do Café: ");
-                            coffee.Nomec = Console.ReadLine();
+                            cafe_simples.Nomec = Console.ReadLine();
                             Console.Write("Informe o defeito do café: ");
-                            coffee.Defeitos = long.Parse (Console.ReadLine());
-                            coffee.Gravar(coffee);
-
+                            cafe_simples.Defeitos = long.Parse(Console.ReadLine());
+                            LC.Add(cafe_simples);
                             break;
                         case 2:
+                            cafe_especia = new Especia();
                             Console.Write("Informe o nome do Café: ");
-                            coffee.Nomec = Console.ReadLine();
+                            cafe_especia.Nomec = Console.ReadLine();
                             Console.Write("Informe quantidade de defeitos do café: ");
-                            coffee.Defeitos = long.Parse (Console.ReadLine());
-                            coffee.Gravar(coffee);
+                            cafe_especia.Defeitos = long.Parse(Console.ReadLine());
+                            LC.Add(cafe_especia);
                             break;
                         case 3:
                             do
@@ -53,14 +56,23 @@ namespace Trabalho_2º.Bimestre
                                 switch (op1)
                                 {
                                     case 1:
-                                        List<Cafe> L = coffee.Mostra();
-                                       
-                                        
-                                        foreach (Simples item in L)
+                                        foreach (Cafe item in LC)
                                         {
-                                            Console.WriteLine(item.Nomec + "/" + item.Defeitos);
+                                            if (item.Categoria == "Simples")
+                                            {
+                                                Console.WriteLine(item.Mostra());
+                                            }
                                         }
-                                        
+                                        Console.ReadKey();
+                                        break;
+                                    case 2:
+                                        foreach (Cafe item in LC)
+                                        {
+                                            if (item.Categoria == "Especial")
+                                            {
+                                                Console.WriteLine(item.Mostra());
+                                            }
+                                        }
                                         Console.ReadKey();
                                         break;
                                 }
@@ -68,13 +80,14 @@ namespace Trabalho_2º.Bimestre
 
                             break;
                         case 4:
-
+                            foreach (Cafe item in LC)
+                            {
+                                Console.WriteLine(item.Mostra());
+                            }
+                            Console.ReadKey();
                             break;
                     }
-
-
                 } while (op != 5);
-                Console.ReadKey();
             }
             catch (ApplicationException x)
             {
