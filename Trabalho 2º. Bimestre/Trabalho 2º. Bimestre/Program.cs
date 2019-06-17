@@ -13,8 +13,7 @@ namespace Trabalho_2º.Bimestre
             try
             {
                 int op,op1;
-                Simples coffee=null;
-                Especia coffe=null;
+                Simples coffee= new Simples();
                 do
                 {
                     Console.Clear();
@@ -28,7 +27,6 @@ namespace Trabalho_2º.Bimestre
                     switch (op)
                     {
                         case 1:
-                            coffee = new Simples();
                             Console.Write("Informe o nome do Café: ");
                             coffee.Nomec = Console.ReadLine();
                             Console.Write("Informe o defeito do café: ");
@@ -37,12 +35,11 @@ namespace Trabalho_2º.Bimestre
 
                             break;
                         case 2:
-                            coffe = new Especia();
                             Console.Write("Informe o nome do Café: ");
-                            coffe.Nomec = Console.ReadLine();
+                            coffee.Nomec = Console.ReadLine();
                             Console.Write("Informe quantidade de defeitos do café: ");
-                            coffe.Defeitos = long.Parse (Console.ReadLine());
-                            coffe.Gravar(coffe);
+                            coffee.Defeitos = long.Parse (Console.ReadLine());
+                            coffee.Gravar(coffee);
                             break;
                         case 3:
                             do
@@ -56,14 +53,15 @@ namespace Trabalho_2º.Bimestre
                                 switch (op1)
                                 {
                                     case 1:
-                                        List<Cafe> L = new List<Cafe>();
-                                        L = coffee.Mostra();
-                                        string s = "";
+                                        List<Cafe> L = coffee.Mostra();
+                                       
+                                        
                                         foreach (Simples item in L)
                                         {
-                                            s = item.Nomec + "/" + item.Defeitos + "... ";
+                                            Console.WriteLine(item.Nomec + "/" + item.Defeitos);
                                         }
-                                        Console.WriteLine(s);
+                                        
+                                        Console.ReadKey();
                                         break;
                                 }
                             } while (op1 != 3);
