@@ -17,7 +17,7 @@ namespace Trabalho_2º.Bimestre
                 throw e;
             }
         }
-        public static void Validardefeitos(double defeitos)
+        public static void Validardefeitos(long defeitos)
         {
             if (defeitos > 500)
             {

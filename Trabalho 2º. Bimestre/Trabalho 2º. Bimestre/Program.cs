@@ -16,6 +16,7 @@ namespace Trabalho_2º.Bimestre
                 List<Cafe> LC = new List<Cafe>();
                 Simples cafe_simples = null;
                 Especia cafe_especia = null;
+                string nom="";
                 do
                 {
                     Console.Clear();
@@ -31,9 +32,13 @@ namespace Trabalho_2º.Bimestre
                         case 1:
                             cafe_simples = new Simples();
                             Console.Write("Informe o nome do Café: ");
-                            cafe_simples.Nomec = Console.ReadLine();
+                            nom = Console.ReadLine();
+                            Minha_Excessão.Validarnomec(nom);
+                            cafe_simples.Nomec = nom;
                             Console.Write("Informe o defeito do café: ");
-                            cafe_simples.Defeitos = long.Parse(Console.ReadLine());
+                            long def = long.Parse(Console.ReadLine());
+                            Minha_Excessão.Validardefeitos(def);
+                            cafe_simples.Defeitos = def;
                             Console.Write("Porcentagem de impurezas: ");
                             cafe_simples.QntImp = double.Parse(Console.ReadLine());
                             LC.Add(cafe_simples);
@@ -41,9 +46,13 @@ namespace Trabalho_2º.Bimestre
                         case 2:
                             cafe_especia = new Especia();
                             Console.Write("Informe o nome do Café: ");
-                            cafe_especia.Nomec = Console.ReadLine();
+                            nom = Console.ReadLine();
+                            Minha_Excessão.Validarnomec(nom);
+                            cafe_especia.Nomec = nom;
                             Console.Write("Informe quantidade de defeitos do café: ");
-                            cafe_especia.Defeitos = long.Parse(Console.ReadLine());
+                            long de = long.Parse(Console.ReadLine());
+                            Minha_Excessão.Validardefeitos(de);
+                            cafe_especia.Defeitos = de;
                             Console.Write("Informe a Classificação: ");
                             cafe_especia.Classificacao = Console.ReadLine();
                             LC.Add(cafe_especia);

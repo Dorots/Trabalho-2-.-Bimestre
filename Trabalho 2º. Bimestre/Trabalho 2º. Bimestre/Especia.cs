@@ -15,6 +15,6 @@ namespace Trabalho_2º.Bimestre
             set { classificacao = value; }
         }
         public Especia() { categoria = "Especial"; }
-        public override string Mostra() { return "Nome do café: "+Nomec + " Defeitos:"  + Defeitos+" Classificação: "+classificacao; }
+        public override string Mostra() { return "Nome do café Especial: "+Nomec + " Defeitos:"  + Defeitos+" Classificação: "+classificacao; }
     }
 }
